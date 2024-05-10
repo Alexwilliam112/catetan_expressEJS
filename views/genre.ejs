@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genre List</title>
+</head>
+
+<body>
+    <div style="gap: 20px; display: flex;">
+        <a href="/genres"><button>GENRE</button></a>
+        <a href="/songs"><button>SONG</button></a>
+        <a href="/songs/add"><button>ADD SONG</button></a>
+    </div>
+
+    <h1>GENRE LIST</h1>
+
+    <table border="1">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                NAME
+            </th>
+        </tr>
+
+        <% genres.forEach(el=> { %>
+            <tr>
+                <td>
+                    <%= el.id %>
+                </td>
+                <td>
+                    <%= el.name %>
+                </td>
+            </tr>
+            <% }) %>
+
+
+    </table>
+
+</body>
+
+</html>

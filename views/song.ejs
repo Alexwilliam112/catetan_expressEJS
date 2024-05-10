@@ -1,0 +1,64 @@
+<%- include('./partials/Header', {title: 'Songs'}) %>
+    <div style="gap: 20px; display: flex;">
+        <a href="/genres"><button>GENRE</button></a>
+        <a href="/songs"><button>SONG</button></a>
+        <a href="/songs/add"><button>ADD SONG</button></a>
+    </div>
+
+    <h1>SONG LIST</h1>
+
+    <table border="1">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                NAME
+            </th>
+            <th>
+                ARTIST
+            </th>
+            <th>
+                GENRE
+            </th>
+            <th>
+                Duration
+            </th>
+            <th>
+                ACTION
+            </th>
+        </tr>
+
+        <% songs.forEach(el=> { %>
+            <tr>
+                <td>
+                    <%= el.id %>
+                </td>
+                <td>
+                    <%= el.title %>
+                </td>
+                <td>
+                    <%= el.artist %>
+                </td>
+                <td>
+                    <%= el.name %>
+                </td>
+                <td>
+                    <%= el.duration %>
+                </td>
+                <td>
+                    <a href="/songs/delete/<%= el.id %>">
+                        <button>
+                            Delete
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <% }) %>
+
+
+    </table>
+
+</body>
+
+</html>

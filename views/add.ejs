@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song List</title>
+</head>
+
+<body>
+    <div style="gap: 20px; display: flex;">
+        <a href="/genres"><button>GENRE</button></a>
+        <a href="/songs"><button>SONG</button></a>
+        <a href="/songs/add"><button>ADD SONG</button></a>
+    </div>
+
+    <h1>ADD NEW SONG</h1>
+
+    <form action="/songs/add" method="post" style="display: flex; flex-direction: column; width: 250px;">
+        Song Title : <input type="text" autocomplete="off" name="title">
+        Artist : <input type="text" autocomplete="off" name="artist">
+        Duration : <input type="number" autocomplete="off" name="duration">
+        <select name="GenreId">
+            <% genres.forEach(el => { %>
+                <option value="<%= el.id %>"><%= el.name %></option>
+            <% }) %>
+        </select>
+        <input type="submit" name="save">
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %> | The Incubators
+    </title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white;
+            border-radius: 12px;
+            color: black;
+            border: 2px solid #ab0505;
+        }
+
+        .button1:hover {
+            background-color: #ab0505;
+            color: white;
+        }
+
+        .button2 {
+            background-color: white;
+            border-radius: 12px;
+            color: black;
+            border: 2px solid #008cba;
+        }
+
+        .button2:hover {
+            background-color: #008cba;
+            color: white;
+        }
+
+        .button3 {
+            background-color: white;
+            border-radius: 12px;
+            color: black;
+            border: 2px solid #05ab4a;
+        }
+
+        .button4:hover {
+            background-color: #05ab4a;
+            color: white;
+        }
+
+        .flex-contrainer {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .notif {
+            color: red;
+        }
+
+        .inline {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="inline">
+        <h1>The Incubator</h1>
+        <a href="/"><button class="button button2">Home</button></a>
+        <a href="/incubators/add"><button class="button button2">Add New Incubator</button></a>
+        <a href="/startup"><button class="button button2">StartUp</button></a>
+    </header>
+    <br>
